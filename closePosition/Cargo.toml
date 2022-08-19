@@ -1,0 +1,16 @@
+[package]
+name = "karimaRust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+
+whirlpool = { path = "../../whirlpools/programs/whirlpool", features = [ "cpi" ]}
+anchor-lang = { git = "https://github.com/project-serum/anchor", tag = "v0.20.1", version = "0.20.1", package = "anchor-lang" }
+solana-program = "1.8.12"
+
+[lib]
+name = "karimaRust"
+crate-type = ["cdylib", "lib"]
+
